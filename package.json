@@ -34,7 +34,7 @@
     "acorn": "^8.14.0",
     "commander": "^12.1.0",
     "fast-glob": "^3.3.3",
-    "javascript-obfuscator": "4.1.1",
+    "javascript-obfuscator": "5.10.0",
     "ora": "^8.1.1",
     "typescript": "~5.7.3"
   },
