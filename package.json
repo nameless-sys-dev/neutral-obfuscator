@@ -1,0 +1,48 @@
+{
+  "name": "neutral-obfuscator",
+  "version": "0.1.0",
+  "description": "Conservative multi-language source obfuscation with an interactive CLI",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "neutral-obfuscate": "./dist/cli.js"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "python",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test test/integration.test.mjs",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^7.2.0",
+    "acorn": "^8.14.0",
+    "commander": "^12.1.0",
+    "fast-glob": "^3.3.3",
+    "javascript-obfuscator": "4.1.1",
+    "ora": "^8.1.1",
+    "typescript": "~5.7.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "prettier": "3.10.1"
+  },
+  "allowScripts": {
+    "javascript-obfuscator@4.1.1": true
+  }
+}
